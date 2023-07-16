@@ -1,0 +1,344 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Teko:wght@300;400;500;600;700&display=swap");
+
+:root {
+  /* ?======== COLORS ========?*/
+
+  --sky-blue-crayola: #58c9da;
+  --raisin-black_90: #1c1c21e6;
+  --raisin-black-1: #28282f;
+  --raisin-black-2: #1c1c21;
+  --majorelle-blue: #5a58e9;
+  --blue-ryb_80: #423ff3cc;
+  --bittersweet: #ff6161;
+  --eerie-black: #212121;
+  --ghost-white: #f7f8fd;
+  --light-gray: #cccccc;
+  --slate-gray: #717684;
+  --cool-gray: #818389;
+  --gainsboro: #e1e5ea;
+  --mustard: #ffdd61;
+  --white: #ffffff;
+  --black: #000000;
+  --onyx: #3f3f46;
+  --jet: rgb(54, 54, 54);
+
+  /* ?======== GRADIENT ========?*/
+
+  --gradient: radial-gradient(ellipse at center, #00000040, transparent 80%);
+
+  /* ?======== TYPOGRAPHY ========?*/
+
+  --ff-montserrat: "Montserrat", sans-serif;
+
+  --fs-1: 4rem;
+  --fs-2: 3.5rem;
+  --fs-3: 2.4rem;
+  --fs-4: 2.2rem;
+  --fs-5: 2rem;
+  --fs-6: 1.8rem;
+  --fs-7: 1.7rem;
+  --fs-8: 1.5rem;
+  --fs-9: 1.4rem;
+
+  --fw-500: 500;
+  --fw-700: 700;
+
+  /* ?======== SPACING ========?*/
+
+  --section-padding: 100px;
+
+  /* ?======== SHADOW ========?*/
+
+  --shadow-1: 0px 2px 50px #a9b7da4d;
+  --shadow-2: 0px -2px 12px #eae8f2;
+  --shadow-3: 0px 4px 4px #646b960f;
+  --shadow-4: 0px 15px 30px #39526a0d;
+  --shadow-5: 0px 15px #23218c0a;
+
+  /* ?======== RADIUS ========?*/
+
+  --radius-8: 8px;
+  --radius-10: 10px;
+  --radius-15: 15px;
+  --radius-20: 20px;
+
+  /* ?======== TRANSITION ========?*/
+
+  --transition-1: 0.25s ease;
+  --transition-2: 0.5s ease;
+  --cubic-in: cubic-bezier(0.51, 0.03, 0.64, 0.28);
+  --cubic-out: cubic-bezier(0.33, 0.85, 0.4, 0.96);
+}
+
+.has-before::before,
+.has-after::after {
+  content: "";
+  position: absolute;
+}
+
+:is(.h1, .h2) .has-before {
+  display: inline-block;
+}
+
+:is(.h1, .h2) .has-before::before {
+  bottom: 8px;
+  left: 0;
+  width: 100%;
+  height: 6px;
+  background-color: var(--mustard);
+  z-index: -1;
+}
+
+.cbtn {
+  max-width: max-content;
+  font-weight: var(--fw-700);
+  height: 55px;
+  display: flex;
+  align-items: center;
+  padding-inline: 50px;
+  border-radius: var(--radius-10);
+  overflow: hidden;
+  transition: var(--transition-2);
+}
+
+.cbtn::before,
+.cbtn::after {
+  right: 0;
+  width: 100%;
+  height: 50%;
+  transform: scaleX(0);
+  background-color: var(--mustard);
+  z-index: -1;
+  transition: transform var(--transition-1);
+}
+
+.cbtn::before {
+  top: 0;
+  transform-origin: left;
+}
+
+.cbtn::after {
+  top: 50%;
+  transform-origin: right;
+}
+
+.cbtn:is(:hover, :focus)::before,
+.cbtn:is(:hover, :focus)::after {
+  transform: scaleX(1);
+}
+
+.cbtn:is(:hover, :focus)::before {
+  transform-origin: right;
+}
+
+.cbtn:is(:hover, :focus)::after {
+  transform-origin: left;
+}
+
+.cbtn-primary {
+  background-color: var(--majorelle-blue);
+  color: var(--white);
+}
+
+.cbtn-primary:is(:hover, :focus) {
+  color: var(--raisin-black-1);
+}
+
+.h1,
+.h2 {
+  font-size: 3.5rem;
+  font-weight: 700;
+}
+
+html {
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: white;
+  color: #717684;
+  font-size: 1.6rem;
+  line-height: 1.75;
+}
+
+.hero-text,
+.hero-title {
+  font-size: 3.5rem;
+  margin-block: 33px 35px;
+}
+
+#pageHeader {
+  background: url(../images/contactBackground.jpg);
+  background-size: cover;
+  background-position: center top;
+  margin-bottom: 100px;
+}
+#pageHeader .overlay {
+  background: rgba(34, 34, 34, 0.8);
+  padding: 180px 0 80px 0;
+}
+#pageHeader .sec-header {
+  margin-bottom: 50px;
+}
+#pageHeader .sec-header h2 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+#pageHeader .sec-header h2 span {
+  color: #5a58e9;
+}
+#pageHeader .sec-header p {
+  color: #5a58e9;
+}
+#pageHeader .sec-header p a {
+  color: #fff;
+  text-decoration: none;
+  transition: 0.4s;
+}
+#pageHeader .sec-header p a:hover {
+  color: #5a58e9;
+}
+#pageHeader .sec-header p span {
+  color: #fff;
+  margin: 0 5px;
+}
+
+/* CONTACT  */
+
+#contactSection {
+  margin-bottom: 20px;
+}
+#contactSection .sec-header {
+  margin-bottom: 50px;
+}
+#contactSection .sec-header h2 {
+  color: #222429;
+  margin-bottom: 30px;
+}
+#contactSection .sec-header h2 span {
+  color: #5a58e9;
+}
+#contactSection .sec-header p {
+  color: #666;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+  margin-bottom: 0;
+}
+#contactSection .icon-box {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+#contactSection .icon-box .icon {
+  background: #5a58e9;
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  text-align: center;
+  margin-right: 15px;
+}
+#contactSection .icon-box .icon .fal {
+  font-size: 20px;
+  padding-top: 20px;
+  color: #000;
+}
+#contactSection .icon-box .txt p {
+  margin-bottom: 0;
+  color: #222429;
+}
+#contactSection .icon-box .txt span {
+  color: #666;
+  font-family: "Rubik", sans-serif;
+  font-size: 16px;
+}
+#contactSection form .form-group .form-control {
+  font-family: "Rubik", sans-serif;
+  background: #f4f5f9;
+  border: 1px solid #f4f5f9;
+  font-size: 15px;
+  padding: 20px;
+  border-radius: 8px;
+}
+#contactSection form .form-group .form-control:focus {
+  box-shadow: none;
+  border: 1px solid #5a58e9;
+}
+#contactSection form .form-group input {
+  height: 62px;
+}
+
+#contactArea .contact-box {
+  background: #5a58e9;
+  border-radius: 10px;
+  padding: 80px;
+  position: relative;
+  transform: translateY(80px);
+  z-index: 1;
+}
+
+#contactArea .row {
+  align-items: center;
+}
+
+#contactArea .sec-header h2 {
+  color: #222429;
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1.1;
+}
+#contactArea .sec-header h2 span {
+  color: #fff;
+}
+
+#contactArea .layer-btn {
+  color: #fff;
+}
+
+#contactArea .layer-btn:hover {
+  color: #222429;
+}
+
+#contactArea .layer-btn::after {
+  background: #222429;
+}
+
+#contactArea .layer-btn::before {
+  background: #fff;
+  border: 1px solid #fff;
+}
+
+.icon-box {
+  display: flex;
+  flex-direction: row;
+  margin-top: 25px;
+}
+
+.fa-phone:before,
+.fa-envelope:before,
+.fa-link:before,
+.fa-map-marker:before {
+  color: #5a58e9;
+  margin-right: 18px;
+}
+.fa-phone:before {
+  font-size: 25px;
+}
+.fa-envelope:before {
+  font-size: 20px;
+}
+.fa-link:before {
+  font-size: 23px;
+}
+.fa-map-marker:before {
+  font-size: 27px;
+  margin-left: 2px;
+}
+
+.has-before,
+.has-after {
+  position: relative;
+  z-index: 1;
+}

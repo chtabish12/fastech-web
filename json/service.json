@@ -1,0 +1,40 @@
+[
+  {
+    "serviceName": "Network Design & Implementation",
+    "serviceType": "IT Service",
+    "serviceImage": "../images/network_service.jpg",
+    "serviceDetails": "network.html"
+  },
+  {
+    "serviceName": "Cloud Computing Solutions",
+    "serviceType": "IT Service",
+    "serviceImage": "../images/cloud_service.jpg",
+    "serviceDetails": "cloud.html"
+  },
+
+  {
+    "serviceName": "Data center Solutions",
+    "serviceType": "IT Service",
+    "serviceImage": "../images/data_service.jpg",
+    "serviceDetails": "data.html"
+  },
+  {
+    "serviceName": "EPC Projects",
+    "serviceType": "Electrical Services",
+    "serviceImage": "../images/ecp_service.jpg",
+    "serviceDetails": "ecp.html"
+  },
+
+  {
+    "serviceName": "CCTV Camera Installation",
+    "serviceType": "Electrical Services",
+    "serviceImage": "../images/camera_service.png",
+    "serviceDetails": "camera.html"
+  },
+  {
+    "serviceName": "Solar System Installation",
+    "serviceType": "Electrical Services",
+    "serviceImage": "../images/solar_service.jpg",
+    "serviceDetails": "solar.html"
+  }
+]
