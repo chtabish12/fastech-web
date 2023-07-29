@@ -3,7 +3,7 @@
 
 let xhr = new XMLHttpRequest();
 
-const file = require("../json/service.json");
+let file = "/json/service.json";
 xhr.open("GET", file, true);
 xhr.send();
 
@@ -60,7 +60,7 @@ xhr.onreadystatechange = function () {
 // // SETTING UP PRODUCTS
 let xhrTwo = new XMLHttpRequest();
 
-const fileTwo = require("../json/product.json");
+let fileTwo = "/json/product.json";
 xhrTwo.open("GET", fileTwo, true);
 xhrTwo.send();
 
