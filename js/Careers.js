@@ -1,7 +1,6 @@
 // // SETTING UP CAREERS
 let xhr = new XMLHttpRequest();
-
-let file = "../json/career.json";
+const file= require('../json/career.json')
 
 xhr.open("GET", file, true);
 xhr.send();
